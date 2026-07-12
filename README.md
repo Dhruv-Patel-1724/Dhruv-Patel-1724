@@ -1,30 +1,10 @@
-# GitHub Profile Hero Banner (SVG, no JS, pure SMIL)
 
-Two files: `dark.svg` and `light.svg` — same layout, palette swapped per your spec.
-
-## What to personalize
-Open the .svg files in a text editor and search for:
-- `Dhruv Patel` — greeting name (I reused this from context; change if wrong)
-- `India`, `B.Tech, Computer Engineering`, `Building developer tools` — info rows
-- `your-portfolio.dev`, `your.email@example.com` — replace with your real links
-- Role list (`Frontend Engineer`, `Full Stack Developer`, ...) — edit the `ROLES` typing lines if you want different text
-- Social icon letters (G / L / T / P) — wrap each `<g>` in an `<a xlink:href="...">` if you want them clickable when the SVG is viewed directly (GitHub's embedded `<img>` won't make them clickable, since GitHub renders README images as flat `<img>` tags)
-
-## How to use on your GitHub profile
-1. Push both files to your profile repo (the one named exactly your username), e.g. under `/assets/`.
-2. In `README.md`, add:
-```md
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/light.svg">
   <img src="assets/dark.svg" alt="Header">
 </picture>
-```
 
-## Good to know
-- GitHub displays README images as `<img>`, so animations (SMIL) still play, but there's no real mouse-hover interactivity in that context — hover/JS-style interactivity was intentionally left out anyway per your "no JavaScript" requirement.
-- Built with only `linearGradient`/`radialGradient`/`filter`/`clipPath`/`animate`/`animateTransform` — no `<script>` tags anywhere, so it's safe for GitHub's sanitizer.
-- If GitHub's markdown renderer strips any animation on their CDN cache, right-click → open the raw SVG URL directly to confirm animations play (they do in any normal browser tab).
 
 
 # 💫 About Me:
